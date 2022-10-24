@@ -1,6 +1,5 @@
 import {hues, white} from '@sanity/color'
 import {SanityMonogram} from '@sanity/logos'
-import React from 'react'
 import {useDataset} from 'sanity'
 
 export function Logo() {

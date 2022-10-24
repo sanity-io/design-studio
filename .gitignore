@@ -1,6 +1,10 @@
-/.sanity
-/.env.local
-/build
-/dist
-
+# Global ignores
+.DS_Store
 node_modules
+
+# Root-level ignores
+/*.log
+/.env.local
+/.next
+/.vercel
+/out

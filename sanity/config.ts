@@ -9,10 +9,11 @@ import {schema} from './schema'
 
 const BASE_URL = 'http://localhost:3000/api/preview'
 
-export default createConfig({
+export const sanityConfig = createConfig({
+  basePath: '/studio',
   title: 'Design',
-  projectId: import.meta.env.SANITY_STUDIO_API_PROJECT_ID || 'mos42crl',
-  dataset: import.meta.env.SANITY_STUDIO_API_DATASET || 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_STUDIO_API_PROJECT_ID || 'mos42crl',
+  dataset: process.env.NEXT_PUBLIC_SANITY_STUDIO_API_DATASET || 'production',
   document: {
     productionUrl: async (prev, ctx) => {
       if (ctx.document._type === 'article') {

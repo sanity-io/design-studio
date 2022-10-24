@@ -1,7 +1,5 @@
 {
-  "root": true,
-  "extends": ["@sanity/eslint-config-studio", "plugin:prettier/recommended"],
-  "plugins": ["import", "prettier"],
+  "extends": "next",
   "rules": {
     "import/order": [
       "error",
@@ -22,6 +20,7 @@
       {"blankLine": "always", "prev": "block", "next": "*"},
       {"blankLine": "always", "prev": "block-like", "next": "*"},
       {"blankLine": "always", "prev": "*", "next": "return"}
-    ]
+    ],
+    "react-hooks/exhaustive-deps": "error"
   }
 }
